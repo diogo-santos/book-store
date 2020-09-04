@@ -101,6 +101,11 @@ class App extends Component {
       }
     });
   }
+  handleViewBook(id) {
+    this.setState((state) => ({
+       bookView: state.books.find(book => book.id === id) 
+    }));
+  }
   handleDeleteBook(id) {
     deleteBook(id)
       .then(this.handleErrors)
@@ -119,11 +124,6 @@ class App extends Component {
         })
       });;
   }
-  handleViewBook(id) {
-    this.setState((state) => ({
-       bookView: state.books.find(book => book.id === id) 
-    }));
-  }
   render() {
     return (
       <div className="container">
@@ -138,12 +138,11 @@ class App extends Component {
           />
         )}
         { this.state.books.length > 0 && (
-          <div className="d-flex justify-content-end">
+          <div className="d-flex justify-content-end mt-2">
             <DropDown 
               label="Sort By"
               options={SORT_OPTIONS}
               onChange={this.handleSortChange}
-              class="mt-2"
             />
           </div>
         )}
@@ -159,7 +158,7 @@ class App extends Component {
           onDelete={this.handleDeleteBook}
         />
         { this.state.books.length > 0 && (
-          <div className="d-flex p-2 justify-content-center">
+          <div className="d-flex justify-content-center mt-2">
               <DropDown
                 label="Page size"
                 options={PAGE_SIZE_OPTIONS}

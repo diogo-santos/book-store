@@ -11,7 +11,7 @@ npm install
 npm start
 ```
 
-#### What I have developed in the allotted time
+#### What I have developed
 - [ ] Fetch all books
 - [ ] Pagination component
 - [ ] Delete Book
@@ -20,13 +20,9 @@ npm start
 - [ ] Items per page dropdown
 - [ ] Testing components with react test library
 
-#### Include any important design decisions you made along the way.
-- [ ] Leveraging React pagination component
-- [ ] Creating a generic components for DropDown and Modal
-- [ ] It does not call getBookById endpoint as the book info was fetched and stored into state
-
-#### Given more time, what would you have done differently?
-- [ ] Add more tests
+#### TODO
+- [ ] Deploy into Heroku
+- [ ] Add tests for component actions
 - [ ] Add api token for security
 - [ ] Internationalization using i18
 - [ ] Caching fetched results
