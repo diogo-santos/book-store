@@ -44,6 +44,10 @@ public class BookRepositoryTest {
 		assertThat(page.getContent()).extracting(bookDto -> bookDto.getTitle().toLowerCase()).contains("reactjs");
 		assertThat(page.getContent()).extracting(BookDto::getAuthor).contains("Vipul A M", "Todd Abel", "Charles David Crawford");
 		assertThat(page.getContent()).extracting(BookDto::getCategory).containsOnly("Computers");
+		assertThat(page.getContent()).extracting(BookDto::getImage).containsOnly(
+				"http://books.google.com/books/content?id=Ht3JDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+				"http://books.google.com/books/content?id=O7nAjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+				"");
 		assertThat(page.getContent()).first().extracting(BookDto::getPublicationDate).isEqualTo(LocalDate.of(2016, 4, 21));
 		assertThat(page.getContent()).last().extracting(BookDto::getPublicationDate).isEqualTo(LocalDate.of(2018, 1, 1));
 
@@ -59,6 +63,7 @@ public class BookRepositoryTest {
 		bookToSave.setTitle("Title");
 		bookToSave.setAuthor("Author");
 		bookToSave.setCategory("Category");
+		bookToSave.setImage("ImageUrl");
 		bookToSave.setPublicationDate(LocalDate.of(2020, 1, 1));
 
 		Book book = entityManager.persist(bookToSave);
@@ -73,5 +78,6 @@ public class BookRepositoryTest {
 		assertThat(bookDto.getAuthor()).isEqualTo(book.getAuthor());
 		assertThat(bookDto.getCategory()).isEqualTo(book.getCategory());
 		assertThat(bookDto.getPublicationDate()).isEqualTo(book.getPublicationDate());
+		assertThat(bookDto.getImage()).isEqualTo(book.getImage());
 	}
 }

@@ -72,6 +72,9 @@ public class BookServiceTest {
 		assertThat(page.getBooks()).extracting(bookDto -> bookDto.getTitle().toLowerCase()).contains("reactjs");
 		assertThat(page.getBooks()).extracting(BookDto::getAuthor).contains("Vipul A M", "Todd Abel", "Charles David Crawford");
 		assertThat(page.getBooks()).extracting(BookDto::getCategory).containsOnly("Computers");
+		assertThat(page.getBooks()).extracting(BookDto::getImage).contains("", null,
+				"http://books.google.com/books/content?id=O7nAjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+		);
 		assertThat(page.getBooks()).first().extracting(BookDto::getPublicationDate).isEqualTo(LocalDate.of(2016, 4, 21));
 		assertThat(page.getBooks()).last().extracting(BookDto::getPublicationDate).isEqualTo(LocalDate.of(2019, 1, 1));
 
