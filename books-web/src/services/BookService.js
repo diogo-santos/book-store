@@ -1,8 +1,8 @@
-const API_URL = 'http://localhost:8080/books';
+const API_URL = process.env.REACT_APP_API_URL;
 
 export async function getBooks(pageNumber, pageSize, sortBy) {
   const url = `${API_URL}?pageNumber=${pageNumber}&pageSize=${pageSize}&sortBy=${sortBy}`
-  const response = await fetch(url)
+  const response = await fetch(url);
   
   return response;
 }

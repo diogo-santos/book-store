@@ -6,6 +6,7 @@ Display Books through REST call to books-api
 - [ ] Download the project or clone it from https://github.com/diogo-santos/book-store
 ```
 cd books-web
+echo "REACT_APP_API_URL=http://localhost:8080/books" >> .env.local
 npm install
 npm start
 ```
