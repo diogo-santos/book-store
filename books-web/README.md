@@ -1,4 +1,4 @@
-# REACTJS Book Management
+# REACTJS Book Store
 Display Books through REST call to books-api
 
 ## Getting the code on your computer
