@@ -1,4 +1,7 @@
 # Book Store
+Check API documentation at https://spring-book-api.herokuapp.com/swagger-ui.html
+
+Check ReactJS app at https://reactjs-book-store.herokuapp.com
 
 ## Getting the code on your computer [Books API]
 - [ ] Java 8
