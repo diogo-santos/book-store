@@ -21,8 +21,7 @@ npm start
 - [ ] Testing components with react test library
 
 #### TODO
-- [ ] Deploy into Heroku
 - [ ] Add tests for component actions
 - [ ] Add api token
-- [ ] Internationalization using i18
+- [ ] Translations using i18
 - [ ] Caching fetched results
