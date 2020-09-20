@@ -23,5 +23,4 @@ npm start
 #### TODO
 - [ ] Add tests for component actions
 - [ ] Add api token
-- [ ] Translations using i18
 - [ ] Caching fetched results
