@@ -27,3 +27,5 @@ npm start
 - [ ] Add tests for component actions
 - [ ] Add api token
 - [ ] Caching fetched results
+- [ ] Loading animation
+
